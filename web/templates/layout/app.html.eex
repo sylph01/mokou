@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">トップ</a>
+            <a class="nav-link" href="/">トップ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">演奏会詳細</a>
