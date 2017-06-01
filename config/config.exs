@@ -7,7 +7,8 @@ use Mix.Config
 
 # General application configuration
 config :mokou,
-  ecto_repos: [Mokou.Repo]
+  ecto_repos: [Mokou.Repo],
+  limit_of_count: 10
 
 # Configures the endpoint
 config :mokou, Mokou.Endpoint,

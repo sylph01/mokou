@@ -1,5 +1,6 @@
 defmodule Mokou.Entry do
   use Mokou.Web, :model
+  import Ecto.Query
 
   schema "entries" do
     field :name, :string
@@ -7,6 +8,10 @@ defmodule Mokou.Entry do
     field :count, :integer
 
     timestamps()
+  end
+
+  def total_count do
+    Mokou.Repo.one(from e in Mokou.Entry, select: sum(e.count)) |> Decimal.to_integer
   end
 
   @doc """
