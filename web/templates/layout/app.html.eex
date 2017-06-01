@@ -35,6 +35,15 @@
       </div>
     </nav>
 
+    <%= if get_flash(@conn, :info) do %>
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <%= get_flash(@conn, :info) %>
+      </div>
+    <%= end %>
+
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <%= render @view_module, @view_template, assigns %>
 

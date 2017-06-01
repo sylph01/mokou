@@ -6,24 +6,24 @@
   <% end %>
 
   <div class="form-group">
-    <%= label f, :name, class: "control-label" %>
+    <%= label f, :name, "おなまえ", class: "control-label" %>
     <%= text_input f, :name, class: "form-control" %>
     <%= error_tag f, :name %>
   </div>
 
   <div class="form-group">
-    <%= label f, :email, class: "control-label" %>
+    <%= label f, :email, "Eメールアドレス", class: "control-label" %>
     <%= text_input f, :email, class: "form-control" %>
     <%= error_tag f, :email %>
   </div>
 
   <div class="form-group">
-    <%= label f, :count, class: "control-label" %>
-    <%= number_input f, :count, class: "form-control" %>
+    <%= label f, :count, "人数", class: "control-label" %>
+    <%= select f, :count, 1..5, class: "form-control" %>
     <%= error_tag f, :count %>
   </div>
 
   <div class="form-group">
-    <%= submit "Submit", class: "btn btn-primary" %>
+    <%= submit "送信する", class: "btn btn-primary" %>
   </div>
 <% end %>

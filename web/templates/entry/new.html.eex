@@ -1,6 +1,8 @@
-<h2>New entry</h2>
+<div class="container">
+<h2>予約を行う</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: entry_path(@conn, :create) %>
 
-<%= link "Back", to: entry_path(@conn, :index) %>
+<%= link "戻る", to: page_path(@conn, :index) %>
+</div>
