@@ -16,6 +16,8 @@ defmodule Mokou.Router do
   scope "/", Mokou do
     pipe_through :browser # Use the default browser stack
 
+	resources "/entries", EntryController
+
     get "/",        PageController, :index
     get "/privacy", PageController, :privacy
     get "/form",    PageController, :form

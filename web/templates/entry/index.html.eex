@@ -1,0 +1,30 @@
+<h2>Listing entries</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Count</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for entry <- @entries do %>
+    <tr>
+      <td><%= entry.name %></td>
+      <td><%= entry.email %></td>
+      <td><%= entry.count %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: entry_path(@conn, :show, entry), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: entry_path(@conn, :edit, entry), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: entry_path(@conn, :delete, entry), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New entry", to: entry_path(@conn, :new) %>
