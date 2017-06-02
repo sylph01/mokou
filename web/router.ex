@@ -9,6 +9,10 @@ defmodule Mokou.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :admin do
+    plug BasicAuth, username: Application.get_env(:mokou, :admin_username), password: Application.get_env(:mokou, :admin_password)
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -16,10 +20,16 @@ defmodule Mokou.Router do
   scope "/", Mokou do
     pipe_through :browser # Use the default browser stack
 
-	resources "/entries", EntryController, only: [:new, :create]
+	  resources "/entries", EntryController, only: [:new, :create]
 
     get "/",        PageController, :index
     get "/privacy", PageController, :privacy
+  end
+
+  scope "/admin", Mokou do
+    pipe_through [:browser, :admin]
+
+    get "/", Admin.PageController, :index
   end
 
   # Other scopes may use custom stacks.

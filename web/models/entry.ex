@@ -11,8 +11,11 @@ defmodule Mokou.Entry do
   end
 
   def total_count do
-    Mokou.Repo.one(from e in Mokou.Entry, select: sum(e.count)) |> Decimal.to_integer
+    count_to_integer(Mokou.Repo.one(from e in Mokou.Entry, select: sum(e.count)))
   end
+
+  defp count_to_integer(nil), do: 0
+  defp count_to_integer(dec), do: Decimal.to_integer(dec)
 
   @doc """
   Builds a changeset based on the `struct` and `params`.
