@@ -8,7 +8,8 @@ use Mix.Config
 # General application configuration
 config :mokou,
   ecto_repos: [Mokou.Repo],
-  limit_of_count: 10
+  limit_of_count: 1400,
+  end_date: "2017-01-21T00:00:00Z"
 
 # Configures the endpoint
 config :mokou, Mokou.Endpoint,
