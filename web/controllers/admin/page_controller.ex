@@ -1,7 +1,10 @@
 defmodule Mokou.Admin.PageController do
   use Mokou.Web, :controller
 
+  alias Mokou.Entry
+
   def index(conn, _params) do
-    render conn, "index.html"
+    entries = Repo.all(Entry)
+    render(conn, "index.html", entries: entries)
   end
 end

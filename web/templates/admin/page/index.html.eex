@@ -1,6 +1,27 @@
 <div class="jumbotron">
   <div class="container">
     <h1 class="display-3">Hello, admin!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
   </div>
+</div>
+
+<div class="container">
+  <h2>現時点での申込み一覧</h2>
+  <table class="table">
+    <tr>
+      <th>#</th>
+      <th>色</th>
+      <th>なまえ</th>
+      <th>Eメールアドレス</th>
+      <th>人数</th>
+    </tr>
+    <%= for entry <- @entries do %>
+      <tr>
+        <th scope="row"><%= entry.id %></th>
+        <th scope="row"><%= Mokou.ColorCode.color(entry.id) %></th>
+        <td><%= entry.name %></td>
+        <td><%= entry.email %></td>
+        <td><%= entry.count %></td>
+      </tr>
+    <%= end %>
+  </table>
 </div>
