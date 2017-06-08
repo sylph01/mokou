@@ -36,7 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :mokou, Mokou.Repo,
   adapter: Ecto.Adapters.MySQL,
-  username: System,get_env("MOKOU_DB_USERNAME"),
+  username: System.get_env("MOKOU_DB_USERNAME"),
   password: System.get_env("MOKOU_DB_PASSWORD"),
   database: "mokou_dev",
   hostname: "localhost",
