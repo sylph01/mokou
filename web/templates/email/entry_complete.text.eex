@@ -1,5 +1,14 @@
-dear <%= @name %>,
+<%= @name %> 様
 
-Your reservation has completed. Thank you!
+（このへんの文章は仮です）
+演奏会の整理券の予約が完了しました。
+
+あなたの予約番号は
+
+<%= @id %> 番
+
+、色は
 
 <%= Mokou.ColorCode.color(@id) %>
+
+です。受付の際に番号と色をスタッフにお申し付けください。

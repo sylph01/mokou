@@ -24,5 +24,6 @@ defmodule Mokou.Entry do
     struct
     |> cast(params, [:name, :email, :count])
     |> validate_required([:name, :email, :count])
+    |> validate_format(:email, ~r/.+@.+\..+/)
   end
 end
