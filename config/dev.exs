@@ -37,7 +37,18 @@ config :phoenix, :stacktrace_depth, 20
 config :mokou, Mokou.Repo,
   adapter: Ecto.Adapters.MySQL,
   username: "root",
-  password: "",
+  password: System.get_env("MOKOU_DB_PASSWORD"),
   database: "mokou_dev",
   hostname: "localhost",
   pool_size: 10
+
+# mailer
+config :mokou, Mokou.Mailer,
+  adapter: Bamboo.SMTPAdapter,
+  server: "m.s01.info",
+  port: 465,
+  username: System.get_env("MOKOU_SMTP_USERNAME"),
+  password: System.get_env("MOKOU_SMTP_PASSWORD"),
+  tls: :if_available, # can be `:always` or `:never`
+  ssl: true, # can be `true`
+  retries: 1
