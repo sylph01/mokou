@@ -1,0 +1,5 @@
+dear <%= @name %>,
+
+Your reservation has completed. Thank you!
+
+<%= Mokou.ColorCode.color(@id) %>

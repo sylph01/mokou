@@ -6,6 +6,7 @@ defmodule Mokou.Email do
     |> to("sylph01@gmail.com")
     |> from("mokou-noreply@harimusic.net")
     |> subject("Test Mail (from Mokou)")
-    |> text_body("Hello world!")
+    |> put_text_layout({Mokou.LayoutView, "email.text"})
+    |> render("entry_complete.text", name: "sylph01", id: 1)
   end
 end

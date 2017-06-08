@@ -1,0 +1,6 @@
+<%= render @view_module, @view_template, assigns %>
+
+----
+
+針の音楽団
+http://harimusic.net/
