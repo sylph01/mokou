@@ -4,7 +4,7 @@ defmodule Mokou.Entry do
 
   schema "entries" do
     field :name, :string
-    field :email, :string
+    field :email, :string, unique: true
     field :count, :integer
 
     timestamps()
@@ -23,6 +23,7 @@ defmodule Mokou.Entry do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:name, :email, :count])
+    |> unique_constraint(:email)
     |> validate_required([:name, :email, :count])
     |> validate_format(:email, ~r/.+@.+\..+/)
   end
