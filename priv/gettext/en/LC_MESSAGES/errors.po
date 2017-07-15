@@ -36,7 +36,7 @@ msgstr ""
 
 ## From Ecto.Changeset.validate_confirmation/3
 msgid "does not match confirmation"
-msgstr ""
+msgstr "入力が一致していません。タイプミスがないか再度ご確認ください。"
 
 ## From Ecto.Changeset.no_assoc_constraint/3
 msgid "is still associated to this entry"

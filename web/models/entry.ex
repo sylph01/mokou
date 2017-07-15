@@ -26,5 +26,6 @@ defmodule Mokou.Entry do
     |> unique_constraint(:email)
     |> validate_required([:name, :email, :count])
     |> validate_format(:email, ~r/.+@.+\..+/)
+    |> validate_confirmation(:email)
   end
 end
