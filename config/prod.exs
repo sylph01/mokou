@@ -17,7 +17,7 @@ config :mokou, Mokou.Endpoint,
           keyfile: "/etc/letsencrypt/live/ticket.harimusic.net/privkey.pem",
           certfile: "/etc/letsencrypt/live/ticket.harimusic.net/fullchain.pem"
   ],
-  force_ssl: true,
+  force_ssl: [hsts: true],
   cache_static_manifest: "priv/static/manifest.json"
 
 config :mokou,
