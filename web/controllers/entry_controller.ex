@@ -17,8 +17,7 @@ defmodule Mokou.EntryController do
         Email.entry_complete_email(address, name, id, count) |> Mailer.deliver_later()
 
         conn
-        |> put_flash(:info, "予約を行いました。登録したEメールアドレスに詳細を送信しました。")
-        |> redirect(to: page_path(conn, :index))
+        |> render("entry_complete.html")
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end

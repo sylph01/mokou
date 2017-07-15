@@ -1,0 +1,8 @@
+<div class="container">
+
+<h2>整理券取得が完了しました。</h2>
+<p>
+登録したEメールアドレスに詳細を送信しました。
+</p>
+<%= link "戻る", to: page_path(@conn, :index), class: "btn btn-secondary btn-lg", role: "button" %>
+</div>
