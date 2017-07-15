@@ -27,8 +27,6 @@ config :mokou,
 # Configure your database
 config :mokou, Mokou.Repo,
   adapter: Ecto.Adapters.MySQL,
-  username: System.get_env("MOKOU_DB_USERNAME"),
-  password: System.get_env("MOKOU_DB_PASSWORD"),
   database: "mokou",
   hostname: "localhost",
   pool_size: 10
@@ -38,8 +36,6 @@ config :mokou, Mokou.Mailer,
   adapter: Bamboo.SMTPAdapter,
   server: "m.s01.info",
   port: 465,
-  username: System.get_env("MOKOU_SMTP_USERNAME"),
-  password: System.get_env("MOKOU_SMTP_PASSWORD"),
   tls: :if_available, # can be `:always` or `:never`
   ssl: true, # can be `true`
   retries: 1
