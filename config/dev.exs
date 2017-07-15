@@ -1,5 +1,11 @@
 use Mix.Config
 
+config :mokou,
+  limit_of_count: 20,
+  end_date: "2017-09-21T00:00:00Z",
+  admin_username: "admin",
+  admin_password: "password"
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

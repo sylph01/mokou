@@ -7,11 +7,7 @@ use Mix.Config
 
 # General application configuration
 config :mokou,
-  ecto_repos: [Mokou.Repo],
-  limit_of_count: 20,
-  end_date: "2017-09-21T00:00:00Z",
-  admin_username: "admin",
-  admin_password: "password"
+  ecto_repos: [Mokou.Repo]
 
 # Configures the endpoint
 config :mokou, Mokou.Endpoint,
