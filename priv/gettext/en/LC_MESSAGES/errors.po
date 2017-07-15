@@ -12,11 +12,11 @@ msgstr ""
 
 ## From Ecto.Changeset.cast/4
 msgid "can't be blank"
-msgstr ""
+msgstr "値を設定してください。"
 
 ## From Ecto.Changeset.unique_constraint/3
 msgid "has already been taken"
-msgstr ""
+msgstr "このメールアドレスは発行済みです。別のメールアドレスをご入力ください。"
 
 ## From Ecto.Changeset.put_change/3
 msgid "is invalid"

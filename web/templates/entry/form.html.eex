@@ -6,7 +6,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= label f, :name, "おなまえ", class: "control-label" %>
+    <%= label f, :name, "お名前（複数人の場合は代表者のみ。ハンドルネームで可。）", class: "control-label" %>
     <%= text_input f, :name, class: "form-control" %>
     <%= error_tag f, :name %>
   </div>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="form-group">
-    <%= label f, :count, "人数", class: "control-label" %>
+    <%= label f, :count, "同時に入場される人数（予約者本人を含む）", class: "control-label" %>
     <%= select f, :count, 1..5, class: "form-control" %>
     <%= error_tag f, :count %>
   </div>

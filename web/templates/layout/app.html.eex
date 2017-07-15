@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Mokou!</title>
+    <title>針の音楽団整理券システム</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -18,7 +18,7 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">Mokou</a>
+      <a class="navbar-brand" href="/">針の音楽団整理券システム</a>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
@@ -26,7 +26,7 @@
             <a class="nav-link" href="/">トップ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">演奏会詳細</a>
+            <a class="nav-link" href="http://concert.harimusic.net/">演奏会特設ページへ戻る</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin">管理者用ページ</a>

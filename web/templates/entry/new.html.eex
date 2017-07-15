@@ -1,5 +1,5 @@
 <div class="container">
-<h2>予約を行う</h2>
+<h2>整理券の取得</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: entry_path(@conn, :create) %>
