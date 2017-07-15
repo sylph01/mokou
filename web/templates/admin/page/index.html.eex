@@ -5,7 +5,8 @@
 </div>
 
 <div class="container">
-  <h2>現時点での申込み一覧</h2>
+  <h2 class="my-4">現時点での申込み済総席数: <%= Mokou.Entry.total_count() %></h2>
+  <h2 class="my-4">現時点での申込み一覧</h2>
   <table class="table">
     <tr>
       <th>#</th>

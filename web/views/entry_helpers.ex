@@ -4,7 +4,7 @@ defmodule Mokou.EntryHelpers do
   end
 
   def count_less_than_limit?() do
-    Mokou.Entry.total_count <= Application.get_env(:mokou, :limit_of_count)
+    Mokou.Entry.total_count() <= Application.get_env(:mokou, :limit_of_count)
   end
 
   def date_before_end?() do
