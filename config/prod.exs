@@ -14,8 +14,8 @@ use Mix.Config
 config :mokou, Mokou.Endpoint,
   url: [host: "ticket.harimusic.net", port: 443],
   https: [port: 443,
-          keyfile: "",
-          certfile: ""
+          keyfile: "/etc/letsencrypt/live/ticket.harimusic.net/privkey.pem",
+          certfile: "/etc/letsencrypt/live/ticket.harimusic.net/fullchain.pem"
   ],
   force_ssl: true,
   cache_static_manifest: "priv/static/manifest.json"
@@ -23,6 +23,27 @@ config :mokou, Mokou.Endpoint,
 config :mokou,
   limit_of_count: 1400,
   end_date: "2017-09-21T00:00:00Z"
+
+# Configure your database
+config :mokou, Mokou.Repo,
+  adapter: Ecto.Adapters.MySQL,
+  username: System.get_env("MOKOU_DB_USERNAME"),
+  password: System.get_env("MOKOU_DB_PASSWORD"),
+  database: "mokou",
+  hostname: "localhost",
+  pool_size: 10
+
+# mailer
+config :mokou, Mokou.Mailer,
+  adapter: Bamboo.SMTPAdapter,
+  server: "m.s01.info",
+  port: 465,
+  username: System.get_env("MOKOU_SMTP_USERNAME"),
+  password: System.get_env("MOKOU_SMTP_PASSWORD"),
+  tls: :if_available, # can be `:always` or `:never`
+  ssl: true, # can be `true`
+  retries: 1
+
 
 # Do not print debug messages in production
 config :logger, level: :info
