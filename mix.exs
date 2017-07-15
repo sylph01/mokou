@@ -39,7 +39,9 @@ defmodule Mokou.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:bamboo, "~> 0.7"},
-     {:bamboo_smtp, "~> 1.2.1"}]
+     {:bamboo_smtp, "~> 1.2.1"},
+     {:erl_creole, github: "sile/erl-creole", app: false}
+   ]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
