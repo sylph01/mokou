@@ -14,7 +14,7 @@
   その他不具合が御座いましたらお気軽にお問い合わせください。
 </p>
 <p class="my-5">
-タイムラインに投稿する → <a href="https://twitter.com/share " class="twitter-share-button" data-url="http://concert.harimusic.net " data-text="「針の音楽団 ～ 吹奏楽で描く日本と幻想郷の世界」の先行入場整理券を取得しました。" data-lang="ja" data-hashtags="針の音楽団">ツイート</a>
+Twitterにつぶやく → <a href="https://twitter.com/share " class="twitter-share-button" data-url="http://concert.harimusic.net " data-text="「針の音楽団 ～ 吹奏楽で描く日本と幻想郷の世界」の先行入場整理券を取得しました。" data-lang="ja" data-hashtags="針の音楽団">ツイート</a>
 <script>
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 </script>
