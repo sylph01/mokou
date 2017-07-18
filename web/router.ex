@@ -30,6 +30,7 @@ defmodule Mokou.Router do
     pipe_through [:browser, :admin]
 
     get "/", Admin.PageController, :index
+    get "/entry/:id", Admin.PageController, :show_entry
   end
 
   # Other scopes may use custom stacks.

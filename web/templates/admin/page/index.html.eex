@@ -17,7 +17,7 @@
     </tr>
     <%= for entry <- @entries do %>
       <tr>
-        <th scope="row"><%= entry.id %></th>
+        <th scope="row"><a href="/admin/entry/<%= entry.id %>"><%= entry.id %></a></th>
         <th scope="row"><%= Mokou.ColorCode.color(entry.id) %></th>
         <td><%= entry.name %></td>
         <td><%= entry.email %></td>
