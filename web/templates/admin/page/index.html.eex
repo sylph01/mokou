@@ -11,6 +11,7 @@
     <tr>
       <th>#</th>
       <th>色</th>
+      <th>登録日時</th>
       <th>なまえ</th>
       <th>Eメールアドレス</th>
       <th>人数</th>
@@ -19,6 +20,7 @@
       <tr>
         <th scope="row"><a href="/admin/entry/<%= entry.id %>"><%= entry.id %></a></th>
         <th scope="row"><%= Mokou.ColorCode.color(entry.id) %></th>
+        <td><%= Mokou.DateHelpers.to_string_without_millisecs(entry.inserted_at) %></td>
         <td><%= entry.name %></td>
         <td><%= entry.email %></td>
         <td><%= entry.count %></td>
