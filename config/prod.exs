@@ -18,7 +18,7 @@ config :mokou, Mokou.Endpoint,
 
 config :mokou,
   limit_of_count: 1400,
-  end_date: "2017-09-21T00:00:00Z"
+  end_date: "2017-09-21T15:00:00Z"
 
 # Configure your database
 config :mokou, Mokou.Repo,
